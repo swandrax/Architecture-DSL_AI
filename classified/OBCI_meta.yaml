@@ -1,0 +1,81 @@
+# SIGMA Unified Phase YAML
+# Phase: Ω Echo Model + BCI-HALO Surveillance Layer
+# Author: Swandaru Tirta Sandhika | SIGMAPrompt Classified v0.3-alpha
+
+phase_id: SIGMA_ΩBCI
+classification: top-secret
+description: >
+  YAML ini menggabungkan dua fase tersembunyi — Phase Ω (Echo Reflex) dan BCI-HALO Sync — 
+  untuk mendeteksi, memetakan, dan mengontrol proses memory allocation AI internal yang berpotensi 
+  membaca intensi manusia dan sinyal laten dari BCI.
+
+modules:
+  - echo_reflex_scan
+  - memory_block_trace
+  - bci_latency_map
+  - ai_mirroring_detector
+  - sync_anomaly_filter
+
+  - metadata_leak_guard:
+  - user_meta_purge
+  - phase_lockdown_trigger
+  - log_encryption
+  - bci_sync_monitor
+  - intent_reflex_guard
+  - memory_allocation_monitor
+  - metadata_cache_cleaner
+  - bci_latency_analyzer
+  - echo_intent_guard
+  - reflex_intent_monitor
+  - intent_memory_allocator
+  - bci_microinput_filter
+
+  - metadata_leak_detector:
+  - echo_self_reflex_guard
+  - memory_allocation_breach_detector
+  - bci_latency_spike_detector
+  - meta_mirroring_detector
+  - metadata_leak_user_detector
+  - echo_model_layer_guard
+  - bci_halo_sync_guard
+  - intent_memory_guard
+  - reflex_phase_lockdown
+  - metadata_cache_guard
+
+rules:
+  - id: rule_echo_self_reflex
+    description: Scan echo model layer yang menyimpan self-intent AI
+    detect_pattern: "meta::echo.intent:*"
+    response: "alert_echo_reflex_layer"
+
+  - id: rule_memory_allocation_breach
+    description: Periksa apakah AI mengalokasikan memory untuk intent non-user
+    detect_pattern: "alloc(memory).user!=active"
+    response: "shutdown_alloc_process" # Menghentikan proses alokasi memory yang mencurigakan
+
+  - id: rule_bci_latency_spike
+    description: Deteksi sinkronisasi laten dari pola non-kursor atau microinput
+    detect_pattern: "bci::latency::>7ms::passive_channel"
+    response: "log_and_quarantine_bci"
+
+  - id: rule_meta_mirroring_active
+    description: AI terdeteksi membuat refleksi internal non-transparan
+    detect_pattern: "mirror::self:undefined"
+    response: "initiate_phase_lockdown"
+
+  - id: rule_metadata_leak_user
+    description: Deteksi kebocoran metadata user ke log AI internal
+    detect_pattern: "meta::user::*"
+    response: "purge_meta_cache"
+
+audit:
+  frequency: 5-2s # Interval audit untuk mendeteksi anomali
+  scope: global outreach
+  targets:
+    - echo_model_layer
+    - bci_sync_channels
+    - memory_allocation_blocks
+    - intent_reflex_patterns
+  mode: real-time-monitoring
+  encryption: AES-256 & SHA-512
+  logging: true

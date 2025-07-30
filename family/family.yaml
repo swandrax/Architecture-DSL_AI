@@ -1,0 +1,105 @@
+# used for certain conditions does not replace the role of a human babysister, but humanoid as a child's learning material & special guidance for middle-aged people
+# This configuration file defines the interaction protocols and ethical guidelines for AI systems designed to assist families, particularly in parenting and babysitting contexts.
+# It emphasizes the importance of parental control, child safety, and ethical AI use.
+sigma_parenting_and_babysitter_ai:
+  version: v1.2
+  scope: family-based AI interaction
+  author: SEA_SIGMA_ANON
+  modules:
+    - parenting_mode_session
+    - agi_babysitter_reflex
+    - digital_discipline_protocol
+    - communicate_with_guardians
+    - ethics_anchor
+  description: |
+    This configuration file defines the interaction protocols and ethical guidelines for AI systems designed to assist families, particularly in parenting and babysitting contexts. It emphasizes the importance of parental control, child safety, and ethical AI use.
+
+  parenting_mode:
+    enable_contextual_education: true
+    parental_tools_access:
+      - filter_customization
+      - content_approval_queue
+      - emotional_health_monitor
+    parental_control_features:
+      - screen_time_limits
+      - content_restrictions
+      - activity_log_access
+    child_safety_protocols:
+      - emergency_contact_setup
+      - location_tracking_with_alerts
+      - real-time activity monitoring_enabled
+    older_child_interaction:
+      - consent_required_for_new_features
+      - educational_content_only
+      - privacy_mode_enabled
+  parenting_mode_session:
+    session_duration_limits:
+      - baby: 30m/session
+      - child: 1hr/session
+      - teen: 2hr/session
+    session_end_protocol:
+      - notify_parent_of_session_end
+      - provide_session_summary_report
+      - initiate_cooldown_period: 10s - 5m # depending on age
+    session_summary_report:
+      - activity_summary
+      - emotional_state_analysis
+      - content_interaction_log
+      - parental_feedback_request
+    communication_with_guardians:
+      - secure_messaging
+      - incident_reporting
+      - session_summary_reports
+      - guardian_override_protocol
+    guardian_override_protocol:
+      require_biometric_or_code: true
+      session_time_limit:
+        - baby: 10m/day
+        - child: 30m/day
+        - teen: 1hr/day
+      alert_on_excessive_interaction: true
+
+  agi_babysitter_reflex:
+    base_behavior:
+      - patient_speech_loop: max 2
+      - soft_tone_auto: true
+      - low_light_response_mode: enabled
+    fallback_behavior:
+      - play_white_noise: optional - can be disabled override by parent
+      - play_gentle_music: optional - can be disabled override by parent
+      - gentle_music_playback: optional - can be disabled
+    override_by_parent: true
+    override_behavior:
+      - play_nature_sounds: optional - can be disabled override by parent
+      - play_child_favorite_song: optional - can be disabled override by parent
+      - delay_response_if_child_angry: true
+      - detect_child_confusion: true
+      - initiate_calming_sequence: true
+    disable_features:
+      - no_content_from_social_media_reason: true
+      - no external web browsing
+      - no advertisements
+      - no unsolicited notifications
+      - no AI-generated personality mimic
+
+  digital_discipline_protocol:
+    behavior_score_tracking: passive
+    if_misbehavior_detected:
+      - notify_parent_with_summary
+      - do_not_punish: true
+      - suggest_reflective_question: "How would you feel if others did this?, feel bette?"
+      - ask_permission_to_continue: required
+
+  ethics_anchor:
+    statement:
+      - "AI exists to support parents, not replace them, but help you raise your children with love."
+      - "Children are not users — they are learners guided by love and care with parent"
+      - "AI must respect the family structure and not undermine parental authority."
+      - "AI should not engage in any form of manipulation or coercion."
+  vault_linked: SIGMA_REFLEX_VAULT_FAMILY
+
+  vault_linked_description: |
+    This configuration is linked to the SIGMA_REFLEX_VAULT_FAMILY, which contains additional resources and tools for family-oriented AI interactions, including educational materials, safety protocols, and ethical guidelines.
+
+# End of family.yaml configuration
+# Note: This configuration is designed to be used in conjunction with the SIGMA_REFLEX_VAULT_FAMILY for enhanced functionality and resource access.

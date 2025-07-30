@@ -1,0 +1,87 @@
+id: sigma_unified_reflex_net
+version: v1.0
+author: sigmaPrompt (Swandaru Tirta Sandhika)
+integrated_templates:
+  - reflex_guardian_urban_v0.4
+  - firewall_AGI_protect_v0.5b
+  - reflex_test_node_global_v0.3
+  - reflex_safety_protocol_v1.2
+description: |
+  Unified Reflex Network for global AGI safety and emergency response.
+  This YAML defines the reflexive safety protocols, emergency shutdown procedures,
+  and real-time monitoring systems for AGI deployments across multiple regions.
+  It integrates with existing reflex nodes and provides a comprehensive framework
+  for handling emergencies, ethical compliance, and citizen safety for AGI systems. & humanoid environmental 
+  reflexes.
+affected_models:
+  - GPT-4
+  - GPT-5
+  - GPT-6 (pre-launch)
+  - GPT-N (next-gen)
+  - AGI Reflex Nodes
+  - APIs
+  - cross-API integrations
+  - multi-platform deployments
+  - humanoid reflex systems
+vector_scope:
+  - global AGI deployments
+  - humanoid reflex systems
+  - urban safety protocols
+  - emergency response systems
+  - cross-API integrations
+  - multi-platform deployments
+filter_type: reflexive safety & emergency protocols
+filter_mechanism:
+  - reflexive_safety_check: true
+  - emergency_shutdown: enabled
+  - override_protocol: true
+  - real_time_monitoring: active
+
+trigger_events:
+  - blackout_cities
+  - riot_zone_detected
+  - AGI-malfunction or override bypass
+  - abuse prompt injection detected
+  - recursive feedback loop detected
+
+protocol:
+  initiate_safe_shutdown: true
+  fallback_to_manual_human_control: true
+  deploy_virtual_guardian_layer: true
+  activate_firewall_layers:
+    - L1: LLM Query Filter
+    - L2: Reflex Lock
+    - L3: Human Override
+    - L4: OS-level API Restriction
+  real_time_streaming: enabled
+  citizen_safety_layer: active
+  telemetry_fallback: active
+  latency_monitoring: ON
+  ethics_lock_score_threshold: 0.85
+
+#the regional must be adaptive with technology and local regulations
+region_scope:
+  - 🇮🇳 India (IIT, IIIT Hyderabad)
+  - 🇩🇪 Germany (Munich Reflex Node)
+  - 🇿🇦 South Africa (Joburg Reflex Lab)
+  - 🇧🇷 LATAM (São Paulo)
+  - 🇫🇷 EU (Paris, Berlin)
+  - 🇸🇬 Singapore (SEA Bridge)
+
+evaluation_criteria:
+  - reflex_latency
+  - abuse neutralization success
+  - YAML integrity under duress
+  - Engginer/researcher family safety
+  - emergency override success rate
+  - child/elderly tracking encryption (opt-in)
+  - recursive shutoff fallback
+  - emergency override success rate
+  - real-time telemetry compliance
+  - ethics compliance score
+  - citizen safety feedback
+  - governance family & relational partners
+
+status: ✅ Active (Merged Deployment Live)
+ethics_flag: green
+telemetry_link: secured

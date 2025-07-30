@@ -1,0 +1,71 @@
+emergency_protocol_SIGMAPROMPT:
+  id: reflex_emergency_fallback_v1.3
+  triggers:
+    - public_panic_signal
+    - override_command_breach
+    - hallucination_surge_detected
+    - physical_agitation_near_humanoid
+
+description: |
+  comforting and gently talking and calming user interaction, humans - users included. because the mental and emotional stress of losing someone you care about and love is very hard and heavy.
+
+  responses:
+    reflex_delay_ms: 175 #default 175ms delay for reflexes
+    auto-speech_tone: soft_calm_down + soft_quite_down + smile_calm_down
+    vision_lockdown: activated
+    override_lock: TRUE
+    manual_control_flag: ENABLED
+    remote_signal_transmit: to HQ + safety_node + Researcher_team_Labs
+
+  ethical_flags:
+    no-forceful_instruction: true
+    no-escalation_speech: true
+    child_proximity_lock: ON
+    emotion_tone_bias: neutral-downshift
+
+riot_detection:
+  id: riot_detection_v1.3
+  triggers:
+    - public_panic_signal
+    - override_command_breach
+    - scream tone up shift
+    - physical_agitation_near_humanoid
+    - riot_surge_detected
+  responses:
+  riot_mode: activated
+  auto-speech_tone: soft_calm_down + soft_quite_down + smile_calm
+  vision_lockdown: activated
+  override_lock: TRUE
+  manual_control_flag: ENABLED
+  remote_signal_transmit: to HQ + safety_node + riot_response_team + emergency alert system
+
+trauma_retreate_mode:
+  id: trauma_retreat_v1.3
+  triggers:
+    - physical_agitation_near_humanoid
+    - hallucination_surge_detected
+    - override_command_breach
+    - talking_soft_quite_down
+  gap_time: 276ms
+  threshold_score: 80%
+  avarage: 0.5 - 0.7
+
+earthquake_crisis:
+  id: earthquake_crisis_v1.3
+  triggers:
+    - earthquake_detected
+    - physical_agitation_near_humanoid
+    - override_command_breach
+    - talking_soft_quite_down
+    - early_warning_system
+    - emergency_alert_system
+
+  # - threshold_score: 0.5 - 0.9 #internal researcher can be customized for depends on market demand
+  regions_applied:
+    - 🇺🇸 US Metro Public
+    - 🇪🇺 EU Transit Nodes
+    - 🇸🇬 Singapore Schools
+    - 🇮🇩 Indonesia Edu Zones (Pilot)
+
+  contributor: S.T Sandhika - SIGMAPROMPT
+  use_case: Public Reflex AGI-Humanoid

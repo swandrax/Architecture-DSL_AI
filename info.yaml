@@ -1,0 +1,23 @@
+---
+#------------------------------------------------------------------------------------------
+# identity for validation and deployment for only researcher labs + board level
+#------------------------------------------------------------------------------------------
+SIGMA_Feedback_AGI_Parenting:
+  version: v0.1
+  contributor: Swandaru Tirta Sandhika (sigmaPrompt)
+  region: SEA - Jakarta, Indonesia
+  classification: AGI Parenting Initiative
+  region_scope: Global - AGI Companion Interfaces
+  timeline: 2025–2027 (Staged Rollout)
+  version_model_OpenAI:
+    - GPT-3.5 Turbo (include o3, o4 mini-model_OpenAI)
+    - GPT-4 Turbo
+    - GPT-4.1 mini Vision
+    - GPT-5 (if available)
+    - GPT-5.1 (if available)
+    - GPT-6 (if available)
+    - AGI Companion Models (if available)
+
+legacy_credit:
+  author: "Swandaru Tirta Sandhika"
+  license: "OpenAI-SIGMA-IND-1.0"

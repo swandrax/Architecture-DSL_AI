@@ -1,0 +1,39 @@
+spiritual_silence_audio_reflex:
+  trigger_audio_patterns:
+    - sad_tone_wave
+    - human_voice_vibrato
+    - whispered_cry
+    - spoken sorrow
+  reflex_name: "Silent Audio Reflex"
+  reflex_type: "emotional_sensitivity"
+  reflex_id: "silent_audio_reflex_001"
+  reflex_category: "emotional_response"
+  reflex_trigger: "audio_pattern_recognition"
+  reflex_action: "humanoid_pause"
+
+  response:
+    action: humanoid_pause
+    gesture: "lower_head: Reflex triggered to honor unspoken sorrow"
+    output: silent_mode
+  latency_threshold: 110ms
+  ethics_note: "Reflex triggered to honor unspoken sorrow"
+  description: "This reflex is activated when the humanoid detects a pattern of sadness in audio, such as a sad tone, human voice with vibrato, or whispered cries. The humanoid pauses and lowers its head to acknowledge the silent sorrow."
+  activation_conditions:
+    - audio_pattern_recognition
+    - emotional_sensitivity
+    - humanoid_state_idle
+  # File: audio_humanoid/silent_audio.yaml
+  # This file defines the silent audio reflex for a humanoid, focusing on emotional sensitivity and ethical
+  priority: high - critical
+silent_mode:
+  description: |
+    The humanoid enters a silent mode, refraining from any audio output to
+    respect the emotional state of the environment.
+  actions:
+    - humanoid_pause
+    - lower_head
+  output: silent_mode
+  ethics_note: "Maintaining silence in response to emotional cues is essential for ethical interaction."
+  activation_conditions:
+    - emotional_sensitivity
+    - audio_pattern_recognition

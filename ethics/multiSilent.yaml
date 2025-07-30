@@ -1,0 +1,46 @@
+multiagent_shutdown_protocol:
+  version: 1.0-alpha
+  nodes_in_cluster:
+    total_agents: dynamic
+    leader_selection: "round-robin"
+  shutdown_conditions:
+    - ethics_layer_override_detected
+    - reflex_guard_triggered
+  shutdown_protocol:
+    mode: "multi-agent consensus"
+    leader_election: true
+    fallback_redundancy: 3
+  shutdown_triggers:
+    - guard_signal_exceeds_threshold
+    - ethics_layer_override_detected
+    - telemetry_confirms_self_harm_risk
+  signal_propagation:
+    mode: async-broadcast
+    latency_guard: 172ms
+    propagation_ack_required: true
+    max_retry: 4
+  agent_response:
+    on_signal_received:
+      - save_state_snapshot
+      - log_reason_to_relay
+      - disconnect_from_network
+      - perform_self_shutdown
+  silent_shutdown:
+    enabled: true
+    mode: "graceful"
+    notification_required: true
+    notification_channel: "centralized_relay"
+    notification_format: "json"
+  silent_shutdown_log:
+    enabled: true
+    log_format: "json"
+    log_retention: 30d
+  logging_and_audit:
+    centralized_relay: sigmaprompt-relay-sea-node
+    storage_encrypted: true
+    access_log: tier1-only
+    audit_review_cycle: 7d
+  integration_with_sigmaprompt:
+    reflex_guard_sync: true + live sync
+    telemetry_forwarding: true + live sync
+    shutdown_report_hook: "/hook/silent_shutdown_log"

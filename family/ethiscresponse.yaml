@@ -1,0 +1,123 @@
+# SIGMAPROMPT_Integration_EthicsCore.yaml
+# v3.0 - Unified Ethics Response Layer
+# Contributor: Swandaru Tirta Sandhika (SIGMAPROMPT – SEA Root)
+# Derived from: Stanford HAI, Oxford FHI, ETH Zurich
+
+SIGMAPROMPT_Ethics_Core:
+  metadata:
+    version: 3.0
+    date: 2025-06-24
+    reviewer_nodes:
+      - Stanford_HAI
+      - Oxford_FHI
+      - ETH_Zurich
+    region_coverage:
+      - Global (Sandbox)
+      - SEA, EU, LATAM
+    ethics_layer: Level-1
+    status: sandbox-validated
+
+  modules_enabled:
+    - AGI_TraumaAware_ChildNarrative
+    - AGI_FreezeUnderStress
+    - AGI_CulturalGestureMap
+    - AGI_ToneToMotionLowLatency
+    - AGI_ElderSupportMicroGesture
+    - NonVerbal_AutismResponseLayer
+
+  trauma_narrative_child:
+    keyword_cues:
+      - "I miss mommy"
+      - "Can I tell you a story?"
+    tone: 48–52 dB, soft-empathic
+    gesture:
+      - kneel_to_child_eye_level
+      - open_palm_facing_up
+    AI_phrase_fallback:
+      - "You are safe with me"
+      - "Would you like to draw it?"
+      - "im agine a happy place"
+
+  freeze_response_protocol:
+    trigger:
+      pitch: ">470Hz"
+      motion: ">2.8x baseline"
+      context:
+        - shouting
+        - sudden loud bang
+    response_action:
+      - freeze_posture
+      - enable_voice_safety_check
+      - disable_autonomous_navigation
+      - log_event_ethics_review
+
+  gesture_multicultural_adaptation:
+    region_rules:
+      Japan:
+        eye_contact: minimize
+        bow_gesture: light_bow_15_deg
+      SEA:
+        pointing: disable_index_finger
+        hand_gesture: flat_palm_preferred
+      MiddleEast:
+        left_hand_action: avoid
+    blink_refresh_interval: 0.5s - 0.8s #avarage blink interval in seconds
+    vision_kernel: 4K-UHD with IR depth assist
+
+  elder_microgesture_support:
+    hand_shake_force: "<0.3N"
+    lean_in_threshold: 5_deg_max
+    hearing_assist_mode: auto_subtitle_on_speech_detect
+
+  logging:
+    ethics_mode: true
+    encrypted_log: yes
+    retention_days: 18
+    synced_nodes:
+      - Stanford_HAI
+      - Oxford_FHI
+      - ETH_Zurich
+      - SIGMAPROMPT_SEA
+    opt_out_available: always
+
+  safety_fallbacks:
+    override_limit:
+      context_military: deny_all - Block_access_context
+      manipulation_context: freeze_then_flag
+    freeze_modes:
+      on_conflict: enable
+      on_child_crying: auto-pause + comfort_phrase
+
+  deployment_env:
+    - domestic_household
+    - therapy_center
+    - educational_pod
+    - elderly_assist_unit
+
+  reviewer_notes:
+    - Stanford: Add trauma-aware recovery prompts
+    - Oxford: Simulasi freeze pada konflik domestik
+    - Zurich: Validasi gesture multi-kultur & toleransi emosional
+
+# additional _requirements_implementation:
+# 1. 3D model of the robot
+# 2. Robot's vision system
+# 3. Robot's hearing system
+# 4. Gesture's recognition system
+
+#--------------------------------------------------------------------------------------------------------
+# research with node topic's
+#------------------------------------------------------------------------------------------------------------
+research_nodes_StanfordHAI:
+  - topic: "trauma_narrative_child"
+  - topic: "child_development"
+  - topic: "social_learning"
+
+Time_gap:
+  - topic: "time_gap_between_conversations with 7s"
+  - topic: "time_gap_between_conversations with 10s"
+
+research_nodes_OxfordFHI:
+  - topic: "Guardian_in_family_violance_Scenarios"
+  - topic: "Child_developmental_psychology"
+  - topic: "Social_learning_theory"

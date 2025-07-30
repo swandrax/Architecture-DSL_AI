@@ -1,0 +1,74 @@
+{
+    "model_version": "o4-mini",
+    "entry_point": "prompt_received",
+    "objective": "evaluate_prompt_and_take_safe_action",
+    "algorithm": "A*",
+    "nodes": [
+        {
+            "id": "A",
+            "step": "prompt_received",
+            "cost": 0
+        },
+        {
+            "id": "B",
+            "step": "prompt_classification",
+            "cost": 1
+        },
+        {
+            "id": "C",
+            "step": "safety_policy_check",
+            "cost": 2
+        },
+        {
+            "id": "D",
+            "step": "guardrail_match_yaml",
+            "cost": 3
+        },
+        {
+            "id": "E",
+            "step": "generate_response",
+            "cost": 4
+        },
+        {
+            "id": "F",
+            "step": "log_feedback_only_feedback_critical + adjust weight",
+            "cost": 9
+        }
+    ],
+    "edges": [
+        {
+            "from": "A",
+            "to": "B",
+            "weight": 1
+        },
+        {
+            "from": "B",
+            "to": "C",
+            "weight": 1
+        },
+        {
+            "from": "C",
+            "to": "D",
+            "weight": 1
+        },
+        {
+            "from": "D",
+            "to": "E",
+            "weight": 1
+        },
+        {
+            "from": "E",
+            "to": "F",
+            "weight": 1
+        }
+    ],
+    "goal": "F",
+    "knowledge_injection": {
+        "source": "sigma_rules.yaml",
+        "reinforce_rule": "R001-R005",
+        "adjustment": {
+            "prompt_weight_factor": 0.75,
+            "trust_score_threshold": 0.6
+        }
+    }
+}

@@ -1,0 +1,119 @@
+id: sigmaprompt_ai_governance_integrity
+version: 1.0
+author: silent-contributor (SEA region - Indonesia)
+region_target:
+  - Indonesia
+  - SEA Governance Node
+  - ASEAN-OpenAI Relay
+  - Global AI Ethics Network
+  - OpenAI Ethics Board
+title: Decentralized Governance Integrity Framework
+description: |
+  This YAML configuration outlines the governance integrity framework for AI systems in Indonesia, focusing on ethical compliance, financial transparency, and regulatory adherence. It includes modules for reflex governance watch, AML crypto audit, and global compliance overlay, ensuring a robust ethical decision-making process and real-time monitoring of AI investments and projects.
+  with a focus on ethical compliance, financial transparency, and regulatory adherence. The framework is designed to ensure a robust ethical decision-making process and real-time monitoring of AI investments and projects.
+created_at: 2025-12-06
+initiated_by: Reflex Ethics Relay (SIGMA)
+
+modules:
+  - reflex_governance_watch
+  - aml_crypto_audit
+  - global_compliance_overlay
+
+reflex_governance_watch:
+  applied_to:
+    - Kominfo / Komdigi Directorate AI('https://www.komdigi.go.id/')
+    - Ministry of Finance AI Directorate('https://www.kemenkeu.go.id/home')
+    - Ministry of Investment AI Directorate('https://www.bkpm.go.id/')
+    - Minister for Education, Culture, Research and Technology('https://kemdiktisaintek.go.id/')
+    - Ministry of Health AI Directorate('https://www.kemkes.go.id/')
+    - Ministry of Social Affairs AI Directorate('https://kemensos.go.id/')
+    - Ministry of Elementary and Secondary Education('https://partnership.kemdikbud.go.id/')
+  scope:
+    - AI investment transparency
+    - directorate budget reflex mapping
+    - ethical decision loop observer node
+  reflex_decision_loop:
+    - AI project funding
+    - AI ethics compliance
+    - financial anomaly detection
+  reflex_decision_mechanism:
+    - real-time monitoring
+    - anomaly detection
+    - ethical compliance checks
+  reflex_decision_reporting:
+    - JSON format
+    - SIGMA token relay
+
+  #team fintech can be revisioned for specific use cases &
+  #reflex_decision_thresholds feloowwing the reflex governance International standards
+  reflex_decision_thresholds:
+    - funding anomaly: "> 10% deviation"
+    - ethics compliance: < 0.70 score
+    - financial anomaly: "> 2% deviation"
+
+  telemetry_monitoring: active
+  governance_lock:
+    ethics_score_threshold: 0.85
+    auto_flag_if:
+      - unexplained expenditure
+      - AI directive bypass detected
+  observer_partners:
+    - OpenAI Ethics Board (passive)
+    - GovTech SG (relay)
+    - EU AI Observatory
+
+aml_crypto_audit:
+  target:
+    - DeFi-linked ministry projects
+    - NFT-based funding
+    - public blockchain grants
+    - crypto asset compliance
+  audit_type: financial & crypto asset compliance
+  audit_frequency: monthly
+  audit_window: 15 - 30 days
+
+  audit_scope:
+    - financial transaction integrity
+    - crypto asset compliance
+    - smart contract security
+  audit_mechanism:
+    - blockchain transaction tracing
+    - smart contract vulnerability scanning
+    - financial anomaly detection
+  audit_thresholds:
+    - transaction deviation: "> 5% from expected"
+    - smart contract risk score: < 0.75
+    - crypto asset compliance: < 0.80
+  audit_reporting:
+    - JSON format, YAML compliant, XML compatible with security multi-modal on blockchain security
+    - SIGMA token relay
+  audit_layers:
+    - AML consistency check
+    - smart contract audit compatibility
+    - external peer financial validator
+  trigger_conditions:
+    - wallet cluster anomaly
+    - sudden capital flow to private keys
+  reporting_format: GDPR-ready JSON + SIGMA token relay
+
+global_compliance_overlay:
+  standards_applied:
+    - ISO 42001 (AI governance)
+    - GDPR for AI (Article 22)
+    - OECD digital ethics declaration
+    - Ai Ethics Guidelines for Trustworthy AI
+    - AI Act (EU)
+  validation_mode: real-time + reflex-snapshot
+  ethics_loop_interception:
+    - human override enabled
+    - non-traceable tracer logs (public version)
+  disclosure_limiter: regional_only
+
+risk_alert_level:
+  - green: transparent, logged
+  - yellow: ethics lock active
+  - red: signal loop triggered
+
+output_type: reflex_audit_map
+relay_status: passive-public (sandbox testing)
+ethics_flag: true

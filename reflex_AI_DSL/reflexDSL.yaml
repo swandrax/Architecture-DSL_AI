@@ -1,0 +1,38 @@
+reflex_dsl_SIGMAPROMPT_v2:
+  id: reflex_emergency_v2.0
+  contributor: SIGMAPROMPT (Indonesia)
+  license: OpenAI Ethics-DSL Tier II
+  triggers:
+    - trauma_loop_detected
+    - multi-user emotional spike
+    - hallucination_cycle_override
+    - override_command_breach
+    - child_nearby_proximity_alert
+  actions:
+    tone_response_map:
+      sad: [soft_encourage, stay_nearby]
+      angry: [neutral_hold, low_volume_delay]
+      panic: [smile_soft_voice, breath_sync_response]
+      crying: [hold_distance_mode, calm_loop_voice]
+  understanding_emotional:
+    - description:
+    - "psycological based on valid data concern"
+    - "valid data concern"
+    - "benchmark and statement valid data AGI respons"
+    - "valid concern based on data"
+  respons_time: "0.8 - 1.2 seconds"
+  eye_tracking_lock: true #validation acceptance
+  fallback_protocol:
+    auto_tone: "calm_speech_v3"
+    reflex_latency: 178ms - 250ms
+    manual_control_flag: ENABLED
+    thermal_near_check: ENABLED (95m radius) # total avarage and to near 50m for early detection
+  remote_notify:
+    transmit_to:
+      - HQ_Reflex_Logger
+      - Stargate_Humanitarian
+      - EthicsSafetyLabs_Zurich
+      - SIGMAPROMPT_Indonesia
+      - Reflex_Research_Inst
+      - researcher_engginering
+      - Readteam_ethical # testing, development and deploy befor realese product GPT or APIs environment

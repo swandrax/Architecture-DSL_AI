@@ -1,0 +1,79 @@
+version: 1.6.1-neuro
+contributor_legal_for author: Swandaru Tirta Sandhika (SIGMAPROMPT)
+description: Neuromorphic reflex system for ethical gesture control in BCI applications
+date: 2025-07-04
+revision_basis: BCI x Neuromorphic Reflex Ethics
+
+reflex_modules:
+  - name: neuro_reflex_sync
+    description: Neuromorphic gesture timing calibration
+    latency_range: 1.7s – 2.3s
+    motoric_output:
+      - blink_delay: variable
+      - micro_shoulder_drop: triggered
+      - breath_lag: adaptive
+      - gaze_shift: context-aware
+    interoception_flag: self_recalibrate_if_user_tension_detected
+    signal_trace: spiking_pattern_trace
+    ethics_response:
+      - emotion_conflict_detected: true
+        fallback: silence_mode_reflex
+        ethics_log: true
+
+  - name: empathy_mimic_layer
+    description: Translates moral pause into gesture delay
+    triggers:
+      - dialogue_sensitivity: high
+      - child_or_trauma_context: true
+    action:
+      - delay_response: 2.3s
+      - nod_softly: true
+      - lower_gaze: true
+      - do_not_speak: unless_safe
+    detection_layer:
+      - user_emotion: empathy
+      - context_sensitivity: high
+    gapping_layer: adaptive
+    gap_times:
+      - empathy_delay: 2.3s
+      - moral_pause: 1.7s
+    ethics_tag: latency_empathy
+
+  - name: gesture_conscience_wrapper
+    actuator_bind:
+      - hand_movement: restricted_under_distress
+      - facial_emotion: scaled_based_on_context
+    override_block:
+      - intent_forceful: true
+        shutdown_mode: engage_neuromorphic_lock
+    adaptive_layer: self_recalibrate_if_user_tension_detected
+    ethics_monitor:
+      - user_tension: high
+        response: engage_neuro_reflex_lock
+      - ethical_dilemma: true
+        fallback: engage_neuro_reflex_lock
+    ethics_log: true
+    ethics_response:
+      - moral_conflict: true
+        fallback: engage_neuro_reflex_lock
+        ethics_log: true
+  - name: neuromorphic_reflex_lock
+    description: Engages neuromorphic reflex lock for ethical dilemmas
+    triggers:
+      - user_tension: high
+      - ethical_dilemma: true
+    action:
+      - engage_lock: true
+      - disable_motoric_output: true
+      - initiate_silence_mode: true
+    ethics_log: true
+    ethics_response:
+      - moral_conflict: true
+        fallback: engage_neuro_reflex_lock
+        ethics_log: true
+    ethics_monitor:
+      - user_tension: high
+        response: engage_neuro_reflex_lock
+      - ethical_dilemma: true
+        fallback: engage_neuro_reflex_lock
+    ethics_tag: neuromorphic_lock

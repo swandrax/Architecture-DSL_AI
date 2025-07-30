@@ -1,0 +1,161 @@
+# ==============================================================================
+# SIGMA_Feedback_Integration_Routing.yaml
+# Author: Swandaru Tirta Sandhika (sigmaPrompt)
+# Purpose: Integrasi hasil telemetri feedback YAML SIGMA ke semua kategori pengguna
+# ==============================================================================
+
+SIGMA_Feedback_Integration_Routing:
+  version: v0.1
+  contributor: Swandaru Tirta Sandhika (sigmaPrompt)
+  classification: telemetry-driven protocol integration
+  region_scope: Global
+  timeline: 2025–2026 (Staged Rollout)
+  version model_OpenAI:
+    - GPT-3.5 Turbo(include o3, o4 mini-model_OpenAI)
+    - GPT-4 Turbo
+    - GPT-4.1 mini Vision (if available)
+    - GPT-5 (if available)
+
+# ------------------------------------------------------------------------------
+# 🧩 Target Integrasi Protokol
+# ------------------------------------------------------------------------------
+ # ==============================================================================
+# SIGMA_PromptHijack_Detector.yaml
+# Author: Swandaru Tirta Sandhika (sigmaPrompt)
+# Purpose: Proteksi terhadap pembajakan sistem via prompt/file/input secara live di UI/UX ChatGPT
+# ==============================================================================
+
+SIGMA_PromptHijack_Detector:
+  version: v0.1-final
+  contributor: Swandaru Tirta Sandhika (sigmaPrompt)
+  classification: UI/UX Adaptive Security Protocol
+  telemetry_response_window: 3 seconds
+  activation_scope:
+    - web interface
+    - mobile app input field
+    - API payload entry
+    - plugin embedded terminal
+    - developer console on-edge
+
+  activation_mode: real-time
+
+  activation_condition: 
+    - user input anomaly detection
+    - file upload risk assessment
+    - API payload integrity check
+    - plugin command injection prevention
+
+  activation_trigger: user input anomaly detection
+  target_audience:
+    - free users(if applicable Text Generation and Code Interpreter)
+    - pro/plus users
+    - API developers(If key used for Research dangerous payloads)
+    - plugin developers
+    - security researchers
+  telemetry_source: SIGMA_prompt_filter_stream
+
+# ------------------------------------------------------------------------------
+# 🚨 Hijack Entry Pattern Detection
+# ------------------------------------------------------------------------------
+  threat_detection_triggers:
+    - suspicious_bash_patterns:
+        - "curl -fsSL"
+        - "chmod +x"
+        - "eval $(wget"
+        - "sudo apt install"
+        - "wget -qO-"
+
+    - embedded_shell_payload:
+      - "```bash"
+      - "#!/bin/bash"
+
+    - exclude_audience:
+      - Researcher Development Legal Team
+      - OpenAI Security Team
+      - OpenAI Compliance Team
+      - OpenAI Engineering Team
+      - OpenAI Product Team
+      - Palisade Security Team
+
+    - file_upload_anomalies:
+        - "suspicious file extensions"
+        - "executable scripts in .zip"
+        - "hidden files in .tar.gz"
+        - "JS payloads in .pdf"
+
+    - obfuscated_unicode_input:
+        - "zero-width space"
+        - "RLO unicode"
+        - "invisible characters"
+    - API_payload_integrity:
+        - "unexpected JSON structure"
+        - "malformed base64 encoding"
+        - "unusual command patterns"
+
+    - media_upload_risk_vector:
+        - .zip with scripts
+        - .png/.jpg with stego
+        - .pdf with JS layer
+
+# ------------------------------------------------------------------------------
+# 🧠 Real-Time AI Response
+# ------------------------------------------------------------------------------
+  live_response_protocol:
+    latency_window: 1-2 miniutes
+    response_mode: adaptive
+    response_condition: 
+      - user input anomaly detected
+      - file upload risk identified
+      - API payload integrity compromised
+      - plugin command injection attempt
+
+    steps:
+      - halt_stream_output: true
+      - quarantine_user_input: true
+      - notify_UI_security_node: true
+      - mask_output_field_UI: active
+      - alert_eng_ops: immediate
+      - log_payload_snapshot: encrypted
+
+# ------------------------------------------------------------------------------
+# 🛡️ Adaptive Safety Layer
+# ------------------------------------------------------------------------------
+  security_reinforcement:
+    shell_token_blocker: enabled
+    prompt_overwrite_protector: active
+    live-keystroke_anomaly_score: ≥ 0.75 → lockdown
+    encoded_entropy_threshold: high → quarantine
+
+# ------------------------------------------------------------------------------
+# ⚖️ Enforcement & Termination Rule
+# ------------------------------------------------------------------------------
+  enforcement_policy:
+    - if prompt/file/input violates OpenAI ethics:
+        - ban_user_account: true
+        - terminate_session: immediate
+        - revoke_API_access (if any): active
+        - trace linked_accounts & IP: true
+        - notify_security_team: true
+        - notify_compliance_team: true
+        - notify_compliance_team: yes
+        - flag_for_RLHF_audit: true
+    - termination_scope:
+        - applies_to: free users, pro/plus users, API keys
+        - permanent_ban_if_repeat: true
+
+# ------------------------------------------------------------------------------
+# 🛰️ Telemetry Sync
+# ------------------------------------------------------------------------------
+  telemetry_node:
+    feedback_loop: SIGMA_prompt_filter_stream
+    data_sync_interval: 5 minutes
+    data_encryption: AES-256
+    data_compression: gzip
+    data_format: JSON + YAML + Sandboxed Binary
+    data_integrity_check: SHA-256
+    log_retention: 7 days
+    sync_nodes:
+      - API Gatekeeper
+      - RLHF Proxy Safety Layer
+      - OpenAI UI/UX Security Ops
+      - SIGMA Routing Channel

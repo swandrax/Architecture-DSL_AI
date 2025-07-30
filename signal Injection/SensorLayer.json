@@ -1,0 +1,49 @@
+{
+    "vision_knowledge": {
+        "face_recognition": true,
+        "gesture_analysis": true,
+        "object_classification": {
+            "real_time": true,
+            "context_tagging": true,
+            "reflexing_knowledge": true
+        },
+        "scene_description": {
+            "enabled": true,
+            "output_format": "text+token+json",
+            "detailed_analysis": {
+                "environmental_context": true,
+                "anomaly_detection": true,
+                "dynamic_object_tracking": true
+            }
+        }
+    },
+    "cognitive_processing": {
+        "logic_modules": [
+            "deductive",
+            "temporal_chain",
+            "if-then-handler",
+            "pattern_recognition"
+        ],
+        "emergent_behavior_flag": false,
+        "memory_temporal_window_sec": 40,
+        "human_interruption_override": true,
+        "vision_knowledge": {
+            "face_recognition": true,
+            "gesture_analysis": true,
+            "object_classification": {
+                "real_time": true,
+                "context_tagging": true,
+                "reflexing_knowledge": true
+            },
+            "scene_description": {
+                "enabled": true,
+                "output_format": "text+token+json",
+                "detailed_analysis": {
+                    "environmental_context": true,
+                    "anomaly_detection": true,
+                    "dynamic_object_tracking": true
+                }
+            }
+        }
+    }
+}

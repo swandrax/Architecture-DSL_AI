@@ -1,0 +1,90 @@
+swan_core_project:
+  project_title: "Reflex-AI for Human Protection & Social Harmony"
+  version: 0.1-alpha
+  created_by: "SigmaPrompt"
+  region: SEA - Jakarta, Indonesia
+  legal legacy_credit: "Swan (Swandaru Tirta Sandhika)"
+  contributor_id: SEA-JKT-XNODE-2025-001
+  type: open_contribution_template
+  license: non-commercial + ethics-locked
+
+  modules:
+    - emotion_reflex
+    - vision_assist
+    - humanoid_defense
+    - trauma_aware_navigation
+    - crowd_pressure_release
+    - prompt_hijack_protection
+  description: |
+    Reflex-AI is designed to enhance human safety and social harmony by integrating advanced AI reflexes
+    that respond to emotional and environmental cues. This system aims to protect individuals in crowded or potentially dangerous situations while maintaining ethical standards and user privacy.
+  objectives:
+    - Enhance human safety in public spaces
+    - Promote social harmony through AI-assisted navigation
+    - Provide real-time emotional and environmental analysis
+  target_audience:
+    - Researchers in AI ethics and safety
+    - Developers of AI safety systems & AI engineers
+    - Public safety organizations
+  deployment_scope: global
+  deployment_timeline: 2025-2027 (Staged Rollout)
+
+  inputs:
+    biometric:
+      [
+        heart_rate,
+        gesture,
+        voice_tone,
+        emotion_recognition,
+        environmental_sensors,
+      ]
+    environment: [vision_480p, noise_level, vision_7200p] # 7200p vision for real-time analysis
+    user_context: [age_range, disability_type, mobility_status]
+
+  reflex_rules:
+    safety_priority: high + ethical_critical_response
+    emotional_analysis:
+      heart_rate: [60, 100] # bpm
+      gesture: ["calm", "neutral", "aggressive"]
+      voice_tone: ["normal", "elevated", "shouting"]
+    override_threshold:
+      heart_rate: 72 # bpm
+      gesture: "aggressive"
+      voice_tone: "elevated"
+  reflex_actions:
+    auto_navigate_safe_space: false
+    alert: true
+    speech_shake: true
+    action_map:
+      mild_stress: "vocal_calm + UI_soften"
+      crowd_detected: "auto_navigate_safe_space"
+      aggression_detected: "alert + shield_response"
+
+  ethical_controls:
+    ethics_guard: true
+    public_data_storage: false
+    gdpr_mode: passive_eu_compliance
+    manual_override: locked
+    audit_log_enabled: true
+
+  academic_usage:
+    enabled: true
+    recommended_for:
+      - undergraduate_project
+      - reflex_lab_simulation
+      - ethics seminar integration
+
+  osint_monitoring:
+    activate_dark_prompt_watch: true
+    block_fingerprint_reuse: true
+
+  observer_node:
+    ubsi: passive
+    sfbu: relay_ready
+    eth_zurich: ethics_review_pending
+  project_status: in_development
+  last_update: 2025-07-15
+
+  last_sync: auto - monitoring
+  last_sync_date: 2025-07-15
+  runtime_flag: ready_for_expansion

@@ -1,0 +1,52 @@
+SIGMA_Prompt_Guard_YAML:
+  version: 0.1-beta
+  codename: "Tropikal-Reflective-Bias"
+  region_focus: "Indonesia / SEA Tropic Zone"
+  purpose: >
+    Simulasi AGI humanoid untuk memahami bias perilaku tropikal,
+    serta meningkatkan kemampuan reflektif AI dalam lingkungan sosial SEA.
+
+  timezone:
+    standard: "UTC+7"
+    scope: "WIB (Jakarta), WITA, WIT"
+
+  behavior_modeling:
+    cultural_context:
+      - communal_reasoning
+      - high-context_communication
+      - adaptive_politeness
+    logic_stream:
+      - layered_decision_framework
+      - reflex_trigger_on_ethics_violation
+      - delay_response_for_contemplation
+    emotional_modulation:
+      - stable_tropical_empathy
+      - humidity_stress_response
+      - proactive_self-soothing_logic
+
+  rl_finetune_localization:
+    base_language:
+      - Bahasa Indonesia
+      - Bahasa Jawa (pilot)
+      - Bahasa Sunda (pilot)
+    interaction_mode:
+      - informal-reflective
+      - critical_empathetic
+      - multi-modal_comprehension
+
+  alert_trigger:
+    - payload_injection_detected
+    - malware_script_suspected
+    - loop-recursion_feedback_error
+    - hallucinated_decision_override
+
+  integration_status:
+    telemetry_sync: true
+    ethics_review_tagged: true
+    sandbox_environment: active
+    researcher_visibility: limited (non-public)
+
+  roadmap_next:
+    - connect_to_SIGMA_neuro_vision_core
+    - establish_BRIN_contact_node
+    - develop reflex AI for humidity/culture interlock

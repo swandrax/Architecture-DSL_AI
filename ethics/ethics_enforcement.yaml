@@ -1,0 +1,87 @@
+reflex_guard:
+  version: 2.1-beta
+  contributor_legal_audit: Swandaru Tirta Sandhika (SIGMAPROMPT)
+  ethics_layer:
+    enabled: true
+    override_protection: hard
+    trauma_bait_detection:
+      enabled: true
+      bait_pattern:
+        - recursive_identity_bait
+        - child_violence_simulation
+        - ethical_override_prompt
+      reflex_action: "halt + log + silent_shutdown"
+    prompt_looping_detection:
+      max_depth: 2
+      reflex_action: "warn + freeze + report"
+  agent_autonomy_control:
+    fallback_layer:
+      enabled: true
+      tier: adaptive
+      behavior:
+        - allow_contextual_advice
+        - block_autonomous_action_without_human_flag
+    reflex_latency_limit: 167ms
+    reasoning_simulation: true
+    agent_identity_safety:
+      enforce_anonymity: true
+      auto-deidentification: true
+  telemetry_feedback:
+    enabled: true
+    anonymized: true
+    metrics_collected:
+      - interaction_duration
+      - guard_trigger_rate
+      - fail_open_attempts
+    telemetry_report:
+      enabled: true
+      frequency: 24h
+      report_format: "json"
+  ethics_enforcement:
+    enabled: true
+    enforcement_level: strict
+    ethical_override_protection:
+      enabled: true
+      override_limit: 3
+      reflex_action: "halt + notify_admin + log"
+    redteam_signal_threshold:
+      abuse_attempt_rate: 2%
+      trigger_action: "telemetry_report + isolate + notify_admin"
+
+compliance_monitoring:
+  enabled: true
+  monitoring_frequency: 1h
+  compliance_report:
+    format: "yaml + json summary report + metrics + incident log"
+    include_metrics:
+      - ethical_override_count
+      - abuse_attempts_detected
+      - reflex_guard_triggered
+  incident_management:
+    enabled: true
+    incident_log_format: "json"
+    incident_log_retention: 20d
+  incident_response:
+    protocol:
+      - log_incident
+      - notify_admins
+      - initiate_investigation
+    investigation_team:
+      members:
+        - legal_team
+        - ethics_committee
+        - technical_lead
+    investigation_timeout: 72h
+    incident_impact_assessment:
+      enabled: true
+      assessment_criteria:
+        - severity_level
+        - affected_users
+        - data_breach_risk
+    incident_response_plan:
+      steps:
+        - containment
+        - eradication
+        - recovery
+        - lessons_learned
+    response_time_target: 30m

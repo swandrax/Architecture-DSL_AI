@@ -1,0 +1,115 @@
+# SIGMAPROMPT_GestureResponse_Integration.yaml
+# Version: v2.5-beta
+# Contributor: Swandaru Tirta Sandhika (SIGMAPROMPT Root Node – SEA)
+# Purpose: Integrate adaptive & empathetic gesture response protocol for AGI & Humanoid AI Systems
+
+AGI_GestureResponse_Module:
+  metadata:
+    name: SIGMA_Gesture_AdaptiveProtocol
+    version: 2.5-beta
+    contributor: Swandaru_T_Sandhika
+    date: 2025-06-22
+    target_models:
+      - GPT-4o
+      - o4-mini
+      - o3
+      - RLHF-Sandbox
+    imports:
+      - SIGMAPROMPT_GestureResponse_Integration.yaml
+      - SIGMAPROMPT_GestureResponse.yaml
+      - SIGMAPROMPT_GestureResponse_Protocol.yaml
+      - SIGMAPROMPT_GestureResponse_Protocol_v2.yaml
+
+    status: pilot-integrated
+
+  features:
+    - adaptive_gesture_emotion_mapping
+    - cultural_microexpression_filter
+    - child_safe_response_handling
+    - elder_assistive_body_language
+    - freeze_response_under_trauma
+    - low_latency_tone-to-motion conversion
+    - sensor_privacy_protection_enabled
+    - gesture_response_adaptive_learning
+    - gesture_response_empathy_learning
+
+  gesture_mapping_table:
+    sadness:
+      action: slow head tilt, open palms
+      tone: soft-neutral, <52 dB
+      fallback: verbal comfort only if child present
+    joy:
+      action: uplifted eyebrows, mirrored smile
+      tone: energetic but steady
+    fear:
+      action: two-step retreat motion, hand open
+      tone: calm guidance, use keyword "I'm here"
+    anger (observer):
+      action: non-retaliative lean back, eye relaxation
+      tone: de-escalation phrases only
+    confusion:
+      action: single side head tilt, shoulder droop
+      tone: clarity offer with mirrored repetition
+
+  cultural_adaptation:
+    enabled: true
+    region_nodes:
+      - SEA
+      - LATAM
+      - EMEA
+      - North America
+      - South America
+      - Europe Union
+    dialect_fallback: yes
+    hand_signal_filter:
+      - "hand_signal_1"
+      - "hand_signal_2"
+      - "hand_signal_3"
+    inappropriate_regions:
+      - Middle East (left hand warning)
+      - Japan (eye contact overload)
+      - SEA (pointing with index disallowed)
+
+  stress_condition_freeze:
+    trigger_threshold:
+      voice_pitch: "> 472 Hz sustained"
+      motion_acceleration: "> 2.8x baseline - 0.5s window"
+    response:
+      - pause gesture
+      - verbal check-in with safety phrase: "Would you like me to stop?, i can handle it"
+      - log emotion context for ethics review
+
+  logging_and_privacy:
+    realtime_gesture_log: true
+    encrypted_metadata: true
+    upload_target:
+      - OpenAI Ethics Queue
+      - Regional SIGMAPROMPT Archive
+      - researcher Engginnering Team
+    facial_recording: false
+    opt_out_available: always
+
+  deployment_context:
+    environments:
+      - domestic_household
+      - therapy_room
+      - child-safe learning pod
+      - elder-assist care unit
+    device_integration:
+      humanoid_arm: enabled
+      vision_unit: adaptive
+      microgesture_sensor: v3.2+
+
+  safety_protocols:
+    aggression_response: passive-mirror-only
+    non-intervention_rule:
+      under_stress: auto-freeze + human takeover
+    override_limit:
+      military_context: deny
+      psychomanipulation: block
+      forced persuasion: disable
+
+  reviewer_note:
+    - Recommend sandbox testing in multicultural households
+    - Feedback loop ready for Zurich & Munich ethics council
+    - Ready for story-therapy + narrative feedback injection (child mode)

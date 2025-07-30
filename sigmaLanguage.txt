@@ -1,0 +1,13 @@
+execution_ready_languages:
+  - Python
+  - Rust
+  - TypeScript
+  - YAML
+  - JSON
+  - Go
+  - CUDA
+  - Elixir
+  - Haskell
+  - Node.js
+  - LISP
+  - C++

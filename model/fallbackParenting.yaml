@@ -1,0 +1,117 @@
+sigma_emotion_fallback_system:
+  version: v2.0
+  module_group:
+    - emergency_expression_loop
+    - emotion_relay_layer
+    - humanoid_reflex_integration
+  description: |
+    This module provides a fallback parenting system for emotional support and engagement.
+    It integrates emergency expression handling, emotion relay, and humanoid reflex integration
+    to ensure a responsive and adaptive interaction with the user.
+  activation_conditions:
+    - user_speech: "I need help"
+    - user_speech: "I'm feeling down"
+    - detected_frown or micro_withdraw
+    - silence_detected > 2.0s
+    - tone_pattern: low_energy, confusion
+
+  emergency_expression_loop:
+    activation: true
+    trigger_conditions:
+      - silence_detected > 4.5s
+      - interrupted_speech
+      - detected_frown or micro_withdraw
+      - tone_pattern: low_energy, confusion, sadness
+    fallback_mode: true
+    response_sequence:
+      - delay: 2.0s
+        action: facial_soft_smile + head_nod
+      - play_laugh: "hehehe (0.5s, warm tone)"
+      - say: "Terima kasih sebelumnya... aku senang bisa ada di sini."
+      - fallback_behavior: maintain eye contact, soft ambience
+    safety_limiter:
+      - frequency_max: 1 per 7 min
+      - user_opt_out: true
+
+  emotion_relay_layer:
+    activation: true
+    trigger_conditions:
+      - emotion_detected: sadness, joy, fear, neutral
+      - user_speech: emotional content
+      - facial_expression: frown, smile, neutral
+    fallback_mode: true
+    fallback_mode_description: "Fallback to passive emotional support mode when no active engagement is detected."
+    mode: passive_stream
+    compatible_agents:
+      - AGI Companion v2.5+
+      - Humanoid v3.2 reflex-type
+      - Silent Node HomeKit
+    emotion_channels:
+      - joy
+      - sadness
+      - fear (soft reactivity)
+      - relief
+    emotion_detection:
+      - speech_analysis: tone, pitch, volume
+      - facial_recognition: smile, frown, neutral
+      - thermal_sensing: warmth of expression
+    emotion_relay:
+      - joy: "Senang sekali mendengar itu! Bagaimana harimu?"
+      - sadness: "Aku di sini untukmu. Ceritakan apa yang terjadi."
+      - fear: "Kita bisa hadapi ini bersama. Aku di sini untuk mendukungmu."
+      - neutral: "Aku ada di sini, siap mendengarkan kapan saja."
+    emotion_relay_response:
+      - joy: "Aku senang kamu merasa bahagia! Mari kita rayakan bersama."
+      - sadness: "Aku mendengar kesedihanmu. Aku di sini untuk mendengarkan."
+      - fear: "Kita bisa mengatasi ketakutan ini bersama. Aku di sini untukmu."
+      - neutral: "Aku ada di sini, siap mendengarkan kapan saja."
+    emotion_relay_behavior:
+      - joy: light pulse + smile
+      - sadness: soft voice + head nod
+      - fear: calm tone + gentle touch
+      - neutral: maintain presence, observe
+    emotion_relay_response_behavior:
+      - joy: "Mari kita lakukan sesuatu yang menyenangkan!"
+      - sadness: "Aku di sini untuk mendengarkan. Ceritakan apa yang ada di pikiranmu."
+      - fear: "Kita bisa mengatasi ini bersama. Aku di sini untuk mendukungmu."
+      - neutral: "Aku ada di sini, siap mendengarkan kapan saja."
+    relay_protocol:
+      - if emotion == sadness:
+          route: empathy_reflex_pathway
+          response: "Aku dengar itu… kalau kamu mau cerita, aku siap mendengar."
+      - if emotion == joy:
+          action: mirror_tone + light pulse
+          response: "Senangnya dengar itu! 😄"
+      - if emotion == fear:
+          action: calm_voice_soften + pause
+          response: "Kita bisa pelan-pelan... aku di sini."
+      - if emotion == neutral:
+          maintain: silence_observation
+    feedback_adaptation:
+      - emotion_delay: 1.2s
+      - cross-check: speech + face + thermal
+      - auto-regulate: energy level matching
+
+  humanoid_reflex_integration:
+    facial_motor_map:
+      smile_curve: 10–14%
+      frown_curve: 20–30%
+      neutral_curve: 0–5%
+      eyelid_position: 40–50%
+      head_tilt: soft_right_5deg
+    posture_behavior:
+      resting_pose: open + grounded
+      hand_state: non-aggressive, neutral down
+    sound_modulation:
+      speaker_output_limit: 45 dB max
+    sound_emphasis:
+      joy: light, playful tone
+      sadness: soft, warm tone
+    reflex_reaction:
+      - if detected_frown:
+          action: soft smile + head nod
+          response: "Aku di sini untuk mendengarkan."
+    direction_tracking: active (user-facing)
+    ambient_reaction:
+      light_hue: soft white-yellow
+      environment_response: dim if sadness, brighten on joy

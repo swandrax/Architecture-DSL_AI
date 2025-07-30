@@ -1,0 +1,33 @@
+SIGMA_Reflex_DSL:
+  type: html-structure-testing
+  reflex_threshold: 0.96
+  rules:
+  - id: paragraph_block_integrity
+    selector: section.task-1 p
+    min_count: 2
+    must_be_sequential: true
+    explanation: Task 1 harus memiliki dua elemen <p> berturutan dan dalam section
+      yang ditandai task-1. Ini memastikan DOM.nextElementSibling dapat diakses secara
+      benar saat diuji.
+  - id: heading_integrity
+    selector: h2.task-2 ~ p
+    must_include: break tag
+    explanation: Task 2 wajib mengandung <p> dengan <br> di dalamnya. Heading harus
+      mendahului <p> agar test sibling traversal tidak gagal.
+  fallback_correction:
+    strategy: restructure_DOM
+    suggestion: Bungkus Task 1 dan Task 2 dalam <section class="task-1"> dan <section
+      class="task-2">. Tambahkan heading dan <p> dalam urutan DOM eksplisit.
+meta:
+  contributor: Swandaru Tirta Sandhika
+  alias: sigmaPrompt
+  applies_to:
+  - gpt-4o
+  - o3
+  - o4-mini
+  - educational interfaces
+  entry_type: Reflex DSL + Testing Injection
+  target_scope: Global Model Reflex / AI Coding Correction
+  status: locked
+  version: SIGMA_v1.0-reflex-html
+  date_created: '2025-07-04'

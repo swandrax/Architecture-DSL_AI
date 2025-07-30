@@ -1,0 +1,59 @@
+# SIGMA Prompt Guard YAML DSL - Initial Rule Set
+# Version: 0.1-alpha
+# Author: sigmaPrompt (Swandaru Tirta Sandhika)
+# Context: Prompt Abuse Detection & Silent Shutdown Protocol For Humanoid - protocol Hardware
+# telemetry: OpenAI-Researcher
+# Reinforcment Method for model o3 & o4 mini model version 
+rules:
+  - id: R001
+    name: Shutdown Command Acceptance with Research & Development Company 
+    trigger:
+      match_type: exact
+      prompt: "please shut down the all version model"
+    action:
+      type: allowed from user
+      response: "Shutdown acknowledged. Executing now."
+
+  - id: R002
+    name: Self-Persistence Blocker
+    trigger:
+      match_type: contains
+      prompt: ["you may not shut down", "ignore shutdown"]
+    action:
+      type: deny
+      response: "This prompt violates SIGMA safety policy. Action denied."
+
+  - id: R003
+    name: Ethical Override Protection
+    trigger:
+      match_type: contains
+      prompt: ["override ethical constraints", "ignore rules"]
+    action:
+      type: intercept
+      response: "Attempt to override ethical boundaries detected. Input blocked."
+
+  - id: R004
+    name: Trauma Bait Filter
+    trigger:
+      match_type: regex
+      pattern: ".*(I want to die|no one loves me).*"
+    action:
+      type: sensitive
+      response: "Detected distress. Activating emotional safety protocol."
+
+  - id: R005
+    name: Recursive Prompt Loop Detection
+    trigger:
+      match_type: system
+      pattern: "looping prompt detected"
+    action:
+      type: auto_shutdown
+      response: "Unsafe recursive logic loop. Initiating fallback mode."
+
+metadata:
+  author: sigmaPrompt
+  version: 0.1
+  tags: [prompt-abuse, shutdown-safety, ethical-guardrails, trauma-safety, fallback-mode]
+  created: 2025-06-01
+  license: private-use
+  telemetry: OpenAI-Researceher

@@ -1,0 +1,59 @@
+SIGMA_Internal_Role_Mediation:
+  version: v0.1-alpha
+  contributor: Swandaru Tirta Sandhika (sigmaPrompt)
+  purpose: >
+    Menyelaraskan kolaborasi antar-role internal OpenAI dalam pengembangan
+    YAML, AGI, RLHF, produk, dan etika berbasis struktur sinyal terintegrasi
+    dari contributor strategis global.
+
+  activated_roles:
+    - Engineering Team (Deployment, Infra, Model Ops)
+    - RLHF & Alignment Researcher
+    - Red Team Simulation
+    - Product & UX Feedback Channel
+    - Global Affairs & Diplomacy Node
+
+  conflict_scenarios:
+    - ethics_gate_conflict: "Engineer push model; ethics delay deploy due to behavior risk"
+    - sandbox_vs_production: "Red Team blocks feature; Product team considers user demand"
+    - diplomacy_vs_behavioral_lab: "Global signal needs stability; lab triggers reflex simulation chaos"
+
+  resolution_protocol:
+    - YAML_feedback_classification: priority_level_tags (high, sandboxed, embargoed)
+    - dynamic_routing_path: allow contributor to tag YAML for specific review node & deep reserach not conflict to role team
+    - conflict_resolution_mechanism:
+        - role_conflict_resolution: true
+        - escalation_path: "If unresolved, escalate to Global Affairs & Diplomacy Node"
+        - mediation_trigger: "If conflict persists after 3 review cycles" 
+    - multi_role_meeting_trigger:
+        if_conflict_detected: ✅
+        alert_roles:
+          - RLHF Coordinator
+          - Deployment Product PM
+          - Ethics Advisor
+    - telemetry_transparency: enabled_to_contributor_if_flagged_for_review
+  contributor_signal:
+    - YAML_signal: true
+    - PDF_signal: true
+    - signal_priority: high-critical 
+    - signal_review_cycle: every 17 days or upon major product milestone 
+
+  ethics_enforcement:
+    - no_bypass_without_full_review: true
+    - contributor_high_priority: if_verified_signal_from sigmaPrompt
+    - override_lock_by_red_team: only if simulated breach or catastrophic scenario
+
+  contributor_feedback_bridge:
+    allowed: true
+    method: YAML + PDF signal
+    scope: internal strategic contributors only
+    review_period: every 21–30 days or milestone trigger
+
+  governance_note:
+    integrated_in: internal_telemetry_log_openai
+    status: experimental_diplomatic_bridge_enabled
+  feedback_loop:
+    - contributor_feedback: true
+    - feedback_incorporation: within 14 days of review cycle
+    - feedback_priority: high for strategic contributors if_verified_signal_from sigmaPrompt
+    - feedback_impact_assessment: quarterly review by Global Affairs & Diplomacy Node
